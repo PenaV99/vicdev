@@ -1,0 +1,167 @@
+/****** Elad Shechter's RESET *******/
+/*** box sizing border-box for all elements ***/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+button {
+    background-color: transparent;
+    color: inherit;
+    border-width: 0;
+    padding: 0;
+    cursor: pointer;
+}
+figure {
+    margin: 0;
+}
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+ul,
+ol,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+p {
+    margin: 0;
+}
+cite {
+    font-style: normal;
+}
+fieldset {
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+                                    /* CUSTOM PROPERTIES 
+                                                    */
+
+:root {
+    --ff-primary: Arial, Helvetica, sans-serif;
+    --ff-secondary: ;
+    
+    --fw-reg: 400;
+    --fw-bold: 900;
+    
+    --clr-light: #f4f1de;
+    --clr-dark: #031951;
+    --clr-accent: #f2cc8f;
+    --clr-highlight: #81b29a;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+                                /* Global */
+
+html {
+    background-color: var(--clr-dark);
+    font-family: var(--ff-primary);
+}
+h1 {
+    font-size: var(--fs-h1);
+}
+h2 {    
+    font-size: var(--fs-h2);
+}
+h3 {
+    font-size: var(--fs-h3);    
+}
+header {
+    display: flex;
+    padding: 1rem;
+    background-color: var(--clr-dark);
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-light);
+}
+.hamburger-menu {
+    height: 3.125em;
+    width: 3.125em;
+    position: relative;
+    cursor: pointer;
+    padding: 1.5rem;
+    border: 1px solid var(--clr-accent);
+    border-radius: 10px;
+}
+.ham-bar {
+    width: 70%;
+    height: 0.25em;
+    background-color: var(--clr-light);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        transition: transform 0.5ms, 
+        opacity 0.5ms, 
+        top 0.5ms;
+    z-index: 20;
+}
+.bar-top {
+    top: 25%;
+}
+.bar-bottom {
+    top: 75%;
+}
+.hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+.hamburger-menu.active .bar-mid {
+    opacity: 0;
+}
+.hamburger-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+.off-screen-menu {
+    position: fixed; 
+    display: none;
+}
+.off-screen-menu.active {
+    right: 0;
+    background-color: var(--clr-dark);
+    color: var(--clr-highlight);
+    opacity: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    transition: right 5s;
+    top: 0;
+    height: 100vh;
+    width: 75%;
+}
