@@ -1,124 +1,142 @@
 ---
-import '../styles/global.css';
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
-		<title>Astro</title>
-		<style>
-			/**************************** UTILITY CLASSES ****************************/
-			.scaffold {
-				display: block;
-				text-align: right;
-			}
-			.highlight {
-				color: var(--clr-highlight);
-			}
-			.accent {
-				background-color: var(--clr-accent);
-			}
-			mark {
-				border-radius: 1.3rem;
-				padding: .5rem;
-				text-align: center;
-				margin: auto;
-				width: 100%;
-				display: block;
-			}
-			/* *************************** IN-PAGE STYLING *************************** */
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        />
+        <title>Astro</title>
+        <style>
+            /**************************** UTILITY CLASSES ****************************/
+            .scaffold {
+                display: block;
+                text-align: right;
+            }
+            .highlight {
+                color: var(--clr-highlight);
+            }
+            .accent {
+                background-color: var(--clr-accent);
+            }
+            mark {
+                border-radius: 1.3rem;
+                padding: 0.5rem;
+                text-align: center;
+                margin: auto;
+                width: 100%;
+                display: block;
+            }
+            /* *************************** IN-PAGE STYLING *************************** */
 
-			header {
-				color: var(--clr-accent);
-			}
-			.headline-el {
-				font-size: var(--fs-h1);
-				text-shadow: 3px 3px 1px white;
-			}
-			.brand-hero-section {
-				color: var(--clr-dark);
-				background-color: #e2cfea;
-			}
-			.hero {
-				width: 100%;
-				height: 20rem;
-				background-image: url(/website-launch.svg);
-				background-position: left;
-				background-repeat: no-repeat;
-				background-size: cover;
-				margin: 0 auto;
-				border: 1px solid red;
-			}
-			.tagline-2 {
-				margin: auto;
-				text-align: center;
-				border: 1px solid green;
-			}
-			.business-card {
-				display: flex;
-				justify-content: flex-end;
-			}
-			.head-shot-img {
-				width: 20em;
-				text-align: right;
-			}
-			#services {
-				background-color: #000;
-			}
-			@media (min-width: 1024px) {
-			.tagline-2 {
-				color: red;
-			}
-			.hero {
-				width: 100%;
-				height: 20rem;
-				background-image: url(/website-launch.svg);
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				margin: 0 auto;
-				border: 1px solid red;
-			}
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<h3>Victor Dev</h3>
-			<div class="off-screen-menu"></div>
-					<div class="hamburger-menu">
-						<div class="ham-bar bar-top"></div>
-						<div class="ham-bar bar-mid"></div>
-						<div class="ham-bar bar-bottom"></div>
-					</div>
-		</header>
-		<main>
-			<section class="brand-hero-section" id="brand-intro">
-				<h1 class="headline-el">
-					Digital Storytelling<span class="scaffold">Through Code and Design</span>
-				</h1>
-				<div class="hero">
-				</div>
-				<h2 class="cta-text-el">Get a Free Website Consultation</h2>
-				<h1 class="tagline-2">Tell Your Story & Sell Your Services</h1>
-			</section>
-			<section id="services">
-				<h1 class="headline-el">Capture Your Brand's Essence</h1>
-				<div class="business-card-wrapper">
-					<h3>I'm <strong>Victor Peña</strong>, a professional <strong>web developer</strong></h3>
-					<div class="business-card">
-						<img src="headshot-blue.png" alt="" class="head-shot-img scaffold">
-					</div>
-				</div>
-			</section>
-		</main>
-		<script src="../scripts/menu.js"></script>
-	</body>
+            header {
+                color: var(--clr-accent);
+            }
+            .headline-el {
+                font-size: var(--fs-h1);
+                text-shadow: 3px 3px 1px white;
+            }
+            .brand-hero-section {
+                color: var(--clr-dark);
+                background-color: #e2cfea;
+            }
+            .hero {
+                width: 100%;
+                height: 20rem;
+                background-image: url(/website-launch-hero.svg);
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .tagline-2 {
+                margin: auto;
+                text-align: center;
+            }
+            .business-card {
+                display: flex;
+                justify-content: flex-end;
+            }
+            .head-shot-img {
+                width: 20em;
+                text-align: right;
+            }
+            #services {
+                background-color: var(--clr-accent);
+            }
+            @media (min-width: 1024px) {
+                .tagline-2 {
+                    text-align: center;
+                    background-color: var(--clr-accent);
+                    margin: auto;
+                    width: 100%;
+                }
+                .hero {
+                    width: 100%;
+                    height: 23rem;
+                    background-image: url(/website-launch-banner4.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin: -4rem auto 0;
+                }
+                .cta-text-el {
+                    text-align: center;
+                    text-shadow: 3px 3px 1px white;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h3>Victor Dev</h3>
+            <div class="off-screen-menu"></div>
+            <div class="hamburger-menu">
+                <div class="ham-bar bar-top"></div>
+                <div class="ham-bar bar-mid"></div>
+                <div class="ham-bar bar-bottom"></div>
+            </div>
+        </header>
+        <main>
+            <section class="brand-hero-section" id="brand-intro">
+                <h1 class="headline-el">
+                    Digital Storytelling<span class="scaffold"
+                        >Through Code and Design</span
+                    >
+                </h1>
+                <div class="hero"></div>
+                <h2 class="cta-text-el">
+                    Tell Your Story & Sell Your Services
+                </h2>
+                <button class="tagline-2"
+                    ><h1 class="headline-el">
+                        Let's Launch Your Website Together!
+                    </h1></button
+                >
+            </section>
+            <section id="services">
+                <h1>Capture Your Brand's Essence</h1>
+                <div class="business-card-wrapper">
+                    <h3>
+                        I'm <strong>Victor Peña</strong>, a professional <strong
+                            >web developer</strong
+                        >
+                    </h3>
+                    <div class="business-card">
+                        <img
+                            src="headshot-blue.png"
+                            alt=""
+                            class="head-shot-img scaffold"
+                        />
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="../scripts/menu.js"></script>
+    </body>
 </html>
