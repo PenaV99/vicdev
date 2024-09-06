@@ -12,100 +12,33 @@ import "../styles/global.css";
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
         />
-        <title>Astro</title>
+        <title>Victor Code and Design</title>
         <style>
-            /**************************** UTILITY CLASSES ****************************/
-            .scaffold {
-                display: block;
-                text-align: right;
-            }
-            .highlight {
-                color: var(--clr-highlight);
-            }
-            .accent {
-                background-color: var(--clr-accent);
-            }
-            mark {
-                border-radius: 1.3rem;
-                padding: 0.5rem;
-                text-align: center;
-                margin: auto;
-                width: 100%;
-                display: block;
-            }
-            /* *************************** IN-PAGE STYLING *************************** */
 
-            header {
-                color: var(--clr-accent);
-            }
-            .headline-el {
-                font-size: var(--fs-h1);
-                text-shadow: 3px 3px 1px white;
-            }
-            .brand-hero-section {
-                color: var(--clr-dark);
-                background-color: #e2cfea;
-            }
-            .hero {
-                width: 100%;
-                height: 20rem;
-                background-image: url(/website-launch-hero.svg);
-                background-position: left;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            .tagline-2 {
-                margin: auto;
-                text-align: center;
-            }
-            .business-card {
-                display: flex;
-                justify-content: flex-end;
-            }
-            .head-shot-img {
-                width: 20em;
-                text-align: right;
-            }
-            #services {
-                background-color: var(--clr-accent);
-            }
-            @media (min-width: 1024px) {
-                .tagline-2 {
-                    text-align: center;
-                    background-color: var(--clr-accent);
-                    margin: auto;
-                    width: 100%;
-                }
-                .hero {
-                    width: 100%;
-                    height: 23rem;
-                    background-image: url(/website-launch-banner4.svg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    margin: -4rem auto 0;
-                }
-                .cta-text-el {
-                    text-align: center;
-                    text-shadow: 3px 3px 1px white;
-                }
-            }
         </style>
     </head>
     <body>
-        <header>
-            <h3>Victor Dev</h3>
-            <div class="off-screen-menu"></div>
-            <div class="hamburger-menu">
-                <div class="ham-bar bar-top"></div>
-                <div class="ham-bar bar-mid"></div>
-                <div class="ham-bar bar-bottom"></div>
-            </div>
+        <header class="header">
+            <nav>
+                <div class="nav">
+                    <h1>VICTOR WEB DEV</h1>
+                    <div class="hamburger-menu">
+                        <div class="ham-bar bar-top"></div>
+                        <div class="ham-bar bar-mid"></div>
+                        <div class="ham-bar bar-bottom"></div>
+                    </div>
+                </div>
+                <div class="off-screen-menu">
+                    <div class="nav-items">About Me</div>
+                    <div class="nav-items">Portfolio</div>
+                    <div class="nav-items">Contact</div>
+                </div>
+            </nav>
         </header>
         <main>
             <section class="brand-hero-section" id="brand-intro">
                 <h1 class="headline-el">
-                    Digital Storytelling<span class="scaffold"
+                    Boosting Your Business<span class="scaffold"
                         >Through Code and Design</span
                     >
                 </h1>
