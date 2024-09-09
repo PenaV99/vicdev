@@ -217,8 +217,9 @@ h3 {
 .cta-button {
     font-size: var(--fs-h1);
     border: 1px solid var(--clr-dark);
+    border-radius: .2em;
     color: var(--clr-dark);
-    background-color: var(--clr-light);
+    background-color: #c7f9cc;
     text-align: center;
     display: block;
     width: 90%;
@@ -237,6 +238,7 @@ h3 {
 .head-shot-img {
     width: 20em;
     align-self: center;
+    box-shadow: 3px 3px 1px var(--clr-dark);
 }
 .email  {
     font-size: var(--fs-h3);
@@ -245,9 +247,24 @@ h3 {
     background-color: var(--clr-accent);
     text-align: center;
     color: var(--clr-dark);
+    margin-top: 1em;
 }
 #portfolio {
-    background-color: var(--clr-light);
+    background-color: #e2cfea;
+    padding: 1em;
+}
+.gallery {
+    display: grid;
+    gap: .5em;
+}
+.gallery img {
+    border: 1px solid white;
+    width: 100%;
+}
+.gallery img:hover {
+    opacity: 90%;
+    cursor: pointer;
+    border: none;
 }
 .footer {
     color: var(--clr-light);
@@ -266,6 +283,11 @@ h3 {
 
     .headline-el {
         text-align: left;
+    }
+    .cta-button {
+        width: 70%;
+        height: 3em;
+        font-size: var(--fs-h1);
     }
     .business-card {
         flex-direction: row;
