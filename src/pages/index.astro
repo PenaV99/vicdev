@@ -12,16 +12,17 @@ import "../styles/global.css";
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5cb9dec18e.js" crossorigin="anonymous"></script>
         <title>Victor Code and Design</title>
-        <style>
-
-        </style>
     </head>
     <body>
         <header class="header">
             <nav>
                 <div class="nav">
-                    <h1>VICTOR WEB DEV</h1>
+                    <h1>Victor WebDEV</h1>
                     <div class="hamburger-menu">
                         <div class="ham-bar bar-top"></div>
                         <div class="ham-bar bar-mid"></div>
@@ -29,9 +30,9 @@ import "../styles/global.css";
                     </div>
                 </div>
                 <div class="off-screen-menu">
-                    <div class="nav-items">About Me</div>
-                    <div class="nav-items">Portfolio</div>
-                    <div class="nav-items">Contact</div>
+                    <div class="menu-items"><a href="#about">About Me</a></div>
+                    <div class="menu-items">Portfolio</div>
+                    <div class="menu-items">Contact</div>
                 </div>
             </nav>
         </header>
@@ -43,33 +44,47 @@ import "../styles/global.css";
                     >
                 </h1>
                 <div class="hero"></div>
-                <h2 class="cta-text-el">
+                <h2 class="headline-el">
                     Tell Your Story & Sell Your Services
                 </h2>
-                <button class="tagline-2"
-                    ><h1 class="headline-el">
-                        Let's Launch Your Website Together!
-                    </h1></button
-                >
+                    <button class="cta-button">
+                        Click to <br>
+                        Launch Your Website
+                    </button>
             </section>
-            <section id="services">
-                <h1>Capture Your Brand's Essence</h1>
+            <section id="about">
                 <div class="business-card-wrapper">
-                    <h3>
-                        I'm <strong>Victor Peña</strong>, a professional <strong
-                            >web developer</strong
-                        >
-                    </h3>
+                    <h2 class="headline-el">
+                        Hi, I'm Victor,
+                    </h2>
                     <div class="business-card">
-                        <img
-                            src="headshot-blue.png"
-                            alt=""
-                            class="head-shot-img scaffold"
-                        />
+                    <h2 class="contact">
+                        Web Developer <br>
+                        (469) 650-0026 <br>
+                        <span class="email">vicpenweb@gmail.com</span>
+                    </h2>
+                    <img
+                        src="headshot-blue.png"
+                        alt=""
+                        class="head-shot-img"/>
                     </div>
+                    <h2>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </h2>
                 </div>
             </section>
+            <section id="portfolio">
+                <h1>Capture Your Brand's Essence</h1>
+            </section>
         </main>
+        <footer class="footer">
+                <h1>Lets get in touch</h1>
+                <h1>Follow me on social media</h1>
+        </footer>
         <script src="../scripts/menu.js"></script>
     </body>
 </html>

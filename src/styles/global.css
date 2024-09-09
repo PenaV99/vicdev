@@ -60,7 +60,7 @@ fieldset {
                                                     */
 
 :root {
-    --ff-primary: Arial, Helvetica, sans-serif;
+    --ff-primary: "Chivo";
     --ff-secondary: ;
     
     --fw-reg: 400;
@@ -71,9 +71,9 @@ fieldset {
     --clr-accent: #f2cc8f;
     --clr-highlight: #81b29a;
     
-    --fs-h1: 2.3rem;
+    --fs-h1: 2rem;
     --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
+    --fs-h3: 1.50rem;
     --fs-body: 1rem;
 }
 @media (min-width: 800px) {
@@ -90,6 +90,9 @@ html {
     background-color: var(--clr-dark);
     font-family: var(--ff-primary);
 }
+body {
+    background-color: #e2cfea;
+}
 h1 {
     font-size: var(--fs-h1);
 }
@@ -103,6 +106,7 @@ h3 {
 .scaffold {
     display: block;
     text-align: right;
+    align-self: end;
 }
 .highlight {
     color: var(--clr-highlight);
@@ -121,68 +125,6 @@ h3 {
     justify-content: space-between;
     align-items: center;
     color: var(--clr-light);
-}
-.nav {
-    background-color: var(--clr-dark);
-    display: flex;
-}
-.nav-items {
-    font-size: var(--fs-h3);
-    font-weight: bold;
-    color: var(--clr-highlight);
-    text-align: center;
-}
-.headline-el {
-    font-size: var(--fs-h1);
-    text-shadow: 3px 3px 1px white;
-}
-.brand-hero-section {
-    color: var(--clr-dark);
-    background-color: #e2cfea;
-}
-.hero {
-    width: 100%;
-    height: 20rem;
-    background-image: url(/website-launch-hero.svg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.tagline-2 {
-    margin: auto;
-    text-align: center;
-}
-.business-card {
-    display: flex;
-    justify-content: flex-end;
-}
-.head-shot-img {
-    width: 20em;
-    text-align: right;
-}
-#services {
-    background-color: var(--clr-accent);
-}
-@media (min-width: 1024px) {
-    .tagline-2 {
-        text-align: center;
-        background-color: var(--clr-accent);
-        margin: auto;
-        width: 100%;
-    }
-    .hero {
-        width: 100%;
-        height: 23rem;
-        background-image: url(/website-launch-banner4.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        margin: -4rem auto 0;
-    }
-    .cta-text-el {
-        text-align: center;
-        text-shadow: 3px 3px 1px white;
-    }
 }
 .hamburger-menu {
     height: 2.3rem;
@@ -224,11 +166,24 @@ h3 {
     transform: translate(-50%, -50%) rotate(-225deg);
     top: 50%;
 }
-
+.nav {
+    background-color: var(--clr-dark);
+    display: flex;
+    justify-content: space-between;
+    width: 99vw;
+    max-width: 99vw;
+}
+.menu-items {
+    font-size: var(--fs-h3);
+    font-weight: bold;
+    color: var(--clr-highlight);
+    text-align: left;
+    margin-left: .5em;
+}
 .off-screen-menu {
     position: fixed;
     right: -100%;
-    height: 5em;
+    height: 10em;
     transition: top .5s;
     background-color: var(--clr-dark);
 }
@@ -236,8 +191,91 @@ h3 {
     opacity: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-evenly;
     transition: top 5s;
     width: 100%;
     right: 0;
+    border-top: 1px solid var(--clr-light);
+    position: absolute;
+}
+.headline-el {
+    font-size: var(--fs-h1);
+    text-shadow: 3px 3px 1px white;
+}
+.brand-hero-section {
+    color: var(--clr-dark);
+    background-color: #e2cfea;
+}
+.hero {
+    width: 100%;
+    height: 28rem;
+    background-image: url(/website-launch-hero.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cta-button {
+    font-size: var(--fs-h1);
+    border: 1px solid var(--clr-dark);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    text-align: center;
+    display: block;
+    width: 90%;
+    height: 4em;
+    margin: auto;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 3px 3px 1px white;
+}
+.business-card {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    max-width: 100%;
+}
+.head-shot-img {
+    width: 20em;
+    align-self: center;
+}
+.email  {
+    font-size: var(--fs-h3);
+}
+#about {
+    background-color: var(--clr-accent);
+    text-align: center;
+    color: var(--clr-dark);
+}
+#portfolio {
+    background-color: var(--clr-light);
+}
+.footer {
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+}
+@media (min-width: 1024px) {
+    .hero {
+        width: 100%;
+        height: 23rem;
+        background-image: url(/website-launch-banner4.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: -4rem auto 0;
+    }
+
+    .headline-el {
+        text-align: left;
+    }
+    .business-card {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: auto;
+        padding: 1em;
+        align-items: end;
+    }
+    .email {
+        font-size: var(--clr-h2);
+    }
 }
